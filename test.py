@@ -58,33 +58,31 @@ def ask_questions(ip, subnet_mask):
     user_last_usable = input("What is the last usable IP address? ").strip()
     user_broadcast = input("What is the broadcast address? ").strip()
     
-    correct = True
     
+    print("")
     if user_network_id == network_id:
         print("Good job on the network ID!\n")
     else:
         print(f"Nice try! The correct network ID is: {network_id}\n")
-        correct = False
+        
         
     if user_first_usable == first_usable:
         print("Good job on the first usable IP address!\n")
     else:
         print(f"Nice try! The correct first usable IP address is: {first_usable}\n")
-        correct = False
+        
     
     if user_last_usable == last_usable:
         print("Good job on the last usable IP address!\n")
     else:
         print(f"Nice try! The correct last usable IP address is: {last_usable}\n")
-        correct = False
+        
     
     if user_broadcast == broadcast_address:
         print("Good job on the broadcast address!\n")
     else:
         print(f"Nice try! The correct broadcast address is: {broadcast_address}\n")
-        correct = False
-
-    return correct
+        
 
 def main():
     print("\nWelcome to the subnetting quiz!\n")
